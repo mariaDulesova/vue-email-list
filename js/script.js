@@ -10,12 +10,11 @@ var app = new Vue({
       mailList: []
     },
     mounted: function() {
-        for(i=0; i<11; i++) {
+        for(i=0; i<10; i++) {
             axios
                 .get("https://flynn.boolean.careers/exercises/api/random/mail")
                 .then(
-                    result =>{
-                        console.log(result.data.response);
+                    result => {
                         this.mailList.push(result.data.response);
                     }
                 )
